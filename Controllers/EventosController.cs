@@ -26,7 +26,7 @@ namespace CalendarApp.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(EventArgs evento)
+        public async Task<IActionResult> Create(Evento evento)
         {
             if (ModelState.IsValid)
             {
@@ -54,7 +54,7 @@ namespace CalendarApp.Controllers
             return View(evento);
         }
 
-
+        [HttpPost]
         public async Task<IActionResult> Edit(Evento evento)
         {
             if (ModelState.IsValid)
